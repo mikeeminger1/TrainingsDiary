@@ -1,5 +1,5 @@
 # TRAININGS DIARY
-#### Video Demo:  https://youtu.be/WnBYfuybJxI
+
 #### Description:
 Every athlete wants to document his trainings and successes. But what is the ideal way? I have always lacked a simple digital solution
 that meets my expectations.Training Diary is the answer.
