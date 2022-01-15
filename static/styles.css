@@ -1,0 +1,8 @@
+.form-w {
+    width: 400px;
+}
+
+.filter-white {
+    filter: invert(93%) sepia(0%) saturate(7473%) hue-rotate(97deg) brightness(114%) contrast(107%);
+}
+

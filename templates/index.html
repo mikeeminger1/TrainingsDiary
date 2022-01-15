@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <h3 class="mb-3">What <em>Trainings Diary</em> can do for you:</h3>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-secondary">Log a new workout to document your progress. <span class="badge bg-dark rounded-pill"> log training</span></li>
+        <li class="list-group-item list-group-item-secondary">Look at all the trainings in a structured way and see what you have accomplished. <span class="badge bg-dark rounded-pill"> diary</span></li>
+        <li class="list-group-item list-group-item-secondary mb-3">Look at your summary per activity type. <span class="badge bg-dark rounded-pill"> summary</span></li>
+    </ul>
+
+    <h3 class="mt-3">Your last Trainings:</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Activity</th>
+                <th>Hardness</th>
+                <th>Duration(in min)</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for log in last_logs %}
+            <tr>
+                <td>{{ log["date"] }}</td>
+                <td>{{ log["activity"] }}</td>
+                <td>{{ log["hardness"] }}</td>
+                <td>{{ log["duration"] }}</td>
+                <td>{{ log["description"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

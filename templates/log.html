@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log Training
+{% endblock %}
+
+{% block main %}
+    <h3 class="mt-3">Log your Training:</h3>
+
+    <form action="/log" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto form-w" name="date" type="date">
+        </div>
+
+        <div class="mb-3">
+            <select class="form-control mx-auto form-w" name="activity">
+                {% for activity in activities %}
+                <option>{{ activity }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <select class="form-control mx-auto form-w" name="hardness">
+                {% for level in hardness %}
+                <option>{{ level }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <input class="form-control mx-auto form-w" name="duration" placeholder="Duration in minutes" type="text">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control mx-auto form-w"  rows="5" name="description" placeholder="Description"></textarea>
+        </div>
+        <button class="btn btn-dark form-w" type="submit">Log training</button>
+    </form>
+{% endblock %}

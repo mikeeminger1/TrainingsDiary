@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Trainings History
+{% endblock %}
+
+{% block main %}
+    <h2 class="mb-3">Trainings History</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Activity</th>
+                <th>Hardness</th>
+                <th>Duration (in min)</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for log in history %}
+            <tr>
+                <td>{{ log["date"] }}</td>
+                <td>{{ log["activity"] }}</td>
+                <td>{{ log["hardness"] }}</td>
+                <td>{{ log["duration"] }}</td>
+                <td>{{ log["description"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

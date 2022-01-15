@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Trainings Summary
+{% endblock %}
+
+{% block main %}
+    <h2 class="mb-3">Trainings Summary:</h2>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Activity</th>
+                <th>Quantity</th>
+                <th>Total time (in min)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for activity in summary %}
+            <tr>
+                <td>{{ activity["activity"] }}</td>
+                <td>{{ activity["quantity"] }}</td>
+                <td>{{ activity["totalTime"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
